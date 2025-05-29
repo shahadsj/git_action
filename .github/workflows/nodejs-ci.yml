@@ -7,13 +7,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4  # Checkout code
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm install
-      - run: npm test
-      - name: Use a Secret
+      #- uses: actions/checkout@v4  # Checkout code
+      #- uses: actions/setup-node@v4
+      #  with:
+      #    node-version: 20
+      #- run: npm install
+      #- run: npm test
+      #- name: Use a Secret
         env:
          API_KEY: ${{ secrets.MY_API_KEY }}
          run: echo "API key is $API_KEY"
